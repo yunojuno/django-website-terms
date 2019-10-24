@@ -16,6 +16,7 @@ Terms are static
 * As a website admin I want to ensure that users have accepted terms
 * As a website admin I want to record when users have accepted terms
 * As a user I want to be sure the correct terms apply
+* As a user I can accept multiple terms (e.g. privacy, Ts&Cs, ...) at the same time
 
 ### Models 
 
