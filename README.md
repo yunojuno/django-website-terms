@@ -4,7 +4,11 @@ Django app for managing website terms and conditions
 
 Website terms change over time. This app is designed to allow site owners to update terms in advance, make terms active on a specific date, and to track user acceptance of terms.
 
-Use cases:
+### Assumptions
+
+Terms are static
+
+### Use cases:
 
 * As a website admin I want to be able to update terms
 * As a website admin I want to be able to publish terms on a given date
@@ -15,17 +19,16 @@ Use cases:
 
 ### Models 
 
-```
+```yaml
 WebsiteTerms:
   category: str ["privacy", "website_use", "..."]
   version: int
   effective_from: date
+  document_type: str ["HTML", "PDF"]
   document_url: url
 
 UserTerms:
   user: User
   terms: WebsiteTerms
   accepted_at: datetime
-  document_url: url
 ```
-
